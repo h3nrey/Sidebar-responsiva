@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    font-weight: 400;
+    transition: all 400ms;
+    opacity: 1;
+    color: var(--text-color);
+}
+
+:root {
+    --body-bg-color: #dce4e3;
+    --green: #18c29c;
+    --light-green: #8ed7c6;
+      --light-grey: #dce4e3;
+    --text-color: #084236;
+}
+
+body{
+    display: flex;
+}
+
+#asideHeader{
+    margin-left: 2rem;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+.sidebar-container{
+    background-color:var(--green);
+    width: 15.625rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 400ms;
+}
+
+.top-container{
+    padding: 1rem;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+div.sider{
+    width: 4.875rem;
+}
+
+
+
+/*----- Form -----*/
+
+form{
+    align-items: center;
+    display: flex;
+    height: 3.125rem;
+    margin-top:1rem;
+}
+
+form span {
+    height: 100%;
+    background: #8ed7c6;
+    border-radius: 0.75rem 0 0 0.75rem;
+    display: flex;
+    justify-content: center;
+}
+
+form span.rounded{
+    border-radius: 0.75rem;
+}
+
+form span img {
+    width: 50%;
+}
+#input-search{
+    background: #8ed7c6;
+    height: 3.125rem;
+    border-radius: 0 0.725rem 0.75rem 0;
+    width: 11rem;
+    border: none;
+}
+
+#input-search:focus-visible, #input-search:focus{
+    border: 0;
+}
+
+.grid-container{
+    margin-top: 1rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.settings-container{
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+
+.sidebar-text{
+    margin-left: 1rem;
+}
+
+button{
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    cursor: pointer;
+}
+
+/*----Down Container---*/
+.down-container{
+    padding: 0.5rem;
+    height: 3.75rem;
+    background: var(--light-green);
+    width: 100%;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.down-container div{
+    display: flex;
+    justify-content:flex-end;
+    width: 100%;
+}
+
+#logout-container{
+    width: 1.5rem;
+    height: 100%;
+}
+.user-text{
+    flex-direction: column;
+    display: flex !important;
+    align-self: flex-end;
+    margin-left: 0.5rem;
+}
+.down-container #avatar{
+    width: 2.7rem;
+    height: 2.7rem;
+    border-radius: 0.5rem;
+}
+
+.down-container #username{
+    font-size: 1rem;
+}
+.down-container #ocupation{
+    font-size: 0.75rem;
+}
+
+div.div-center, header.div-center{
+    justify-content: center !important;
+}
+
+.p-hiders{
+    display: none !important;
+    opacity: 0 !important;
+}

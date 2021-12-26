@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar</title>
+    <link rel="shortcut icon" href="Assets/logo.svg" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <div class="sidebar-container">
+        <div class="top-container">  
+            <header class=" to-center">
+                <span class="full">
+                    <img src="Assets/logo.svg" alt="">
+                </span>
+                <span>
+                    <button>
+                        <img src="Assets/menu.svg" alt="">
+                    </button>
+                </span>
+            </header>    
+            <form action="">
+                <span>
+                    <img src="Assets/search.svg" alt="">
+                </span>
+                <input type="text" class="full" id="input-search" placeholder="Buscar">
+            </form>      
+            <div class="grid-container to-center">
+                <div class="settings-container">
+                    <img src="Assets/grid.svg" alt="">
+                    <p class="full sidebar-text">Dashboard</p>
+                </div>
+                <div class="settings-container">
+                    <img src="Assets/pet.svg" alt="">
+                    <p class="full sidebar-text">Pets</p>
+                </div>
+                <div class="settings-container">
+                    <img src="Assets/user.svg" alt="">
+                    <p class="full sidebar-text">Clientes</p>
+                </div>
+                <div class="settings-container">
+                    <img src="Assets/vet.svg" alt="">
+                    <p class="full sidebar-text">Vets</p>
+                </div>
+                <div class="settings-container">
+                    <img src="Assets/settings.svg" alt="">
+                    <p class="full sidebar-text">Ajustes</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="down-container">
+            <div class="to-center">
+                <div id="user-container" class="full">
+                    <img src="Assets/photo.jpg" alt="Pessoa" class="full" id="avatar">
+                    <div class="user-text">
+                        <h2 id="username" class="full">Beth Harmor</h2>
+                        <h3 id="ocupation" class="full">Veterinária</h3>
+                    </div>
+                </div>
+                
+                
+                <div id="logout-container">
+                    <img src="Assets/log-out.svg" alt="">
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div id="asideHeader">
+        <h1>Dashboard</h1>
+    </div>
+    <script>
+        const btn = document.querySelector("button");
+        btn.addEventListener('click', () => {
+            const sidebar = document.querySelector("div.sidebar-container");
+            const pHiders = document.querySelectorAll(".full");
+            const searchContainer = document.querySelector("form span");
+            const containerCenter = document.querySelectorAll(".to-center");
+            for (const div of containerCenter) {
+                div.classList.toggle("div-center");
+            }
+            sidebar.classList.toggle("sider");
+            document.querySelector("form span").classList.toggle("rounded");
+            for (const p of pHiders) {
+                p.classList.toggle("p-hiders");                
+            }
+        })
+    </script>
+</body>
+
+
+</html>
